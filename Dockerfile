@@ -1,4 +1,4 @@
-FROM cviebig/arch-base
+FROM cviebig/arch-docker
 
 RUN pacman -S --noprogressbar --noconfirm --needed ca-certificates jenkins git subversion cvs
 

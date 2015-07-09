@@ -1,7 +1,7 @@
 How to use:
 
 docker create -v /var/lib/jenkins/.jenkins/jobs --name jenkinsjobs cviebig/scratch null
-docker run --volumes-from jenkinsjobs cviebig/arch-jenkins &
+docker run --volumes-from jenkinsjobs --privileged cviebig/arch-jenkins &
 
 Access configured jobs as follows:
 
