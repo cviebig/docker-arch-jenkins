@@ -2,7 +2,11 @@ FROM cviebig/arch-base
 
 RUN pacman -S --noprogressbar --noconfirm --needed ca-certificates jenkins git subversion cvs
 
+ADD run.sh /var/lib/jenkins/
+RUN chown jenkins:jenkins /var/lib/jenkins/run.sh && \
+    chmod +x /var/lib/jenkins/run.sh
+
+VOLUME $JENKINS_H/jobs
 EXPOSE 8080
 
-USER jenkins
-CMD ["java","-jar","/usr/share/java/jenkins/jenkins.war"]
+CMD ["/var/lib/jenkins/run.sh"]
