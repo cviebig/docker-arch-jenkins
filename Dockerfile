@@ -55,6 +55,7 @@ RUN curl -L $JENKINS_U/ant.hpi -o $JENKINS_P/ant.hpi && \
     curl -L $JENKINS_U/ssh-credentials.hpi -o $JENKINS_P/ssh-credentials.hpi && \
     curl -L $JENKINS_U/ssh-slaves.hpi -o $JENKINS_P/ssh-slaves.hpi && \
     curl -L $JENKINS_U/subversion.hpi -o $JENKINS_P/subversion.hpi && \
+    curl -L $JENKINS_U/token-macro.hpi -o $JENKINS_P/token-macro.hpi && \
     curl -L $JENKINS_U/translation.hpi -o $JENKINS_P/translation.hpi && \
     curl -L $JENKINS_U/windows-slaves.hpi -o $JENKINS_P/windows-slaves.hpi && \
     touch $JENKINS_P/ant.hpi.pinned && \
@@ -87,6 +88,7 @@ RUN curl -L $JENKINS_U/ant.hpi -o $JENKINS_P/ant.hpi && \
     touch $JENKINS_P/ssh-slaves.hpi.pinned && \
     touch $JENKINS_P/subversion.hpi.pinned && \
     touch $JENKINS_P/translation.hpi.pinned && \
+    touch $JENKINS_P/token-macro.hpi.pinned && \
     touch $JENKINS_P/windows-slaves.hpi.pinned && \
     chown -R jenkins:jenkins $JENKINS_H
 
