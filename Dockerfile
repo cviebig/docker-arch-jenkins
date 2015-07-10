@@ -90,6 +90,8 @@ RUN curl -L $JENKINS_U/ant.hpi -o $JENKINS_P/ant.hpi && \
     touch $JENKINS_P/windows-slaves.hpi.pinned && \
     chown -R jenkins:jenkins $JENKINS_H
 
+RUN gpasswd -a jenkins docker
+
 VOLUME $JENKINS_H/jobs
 EXPOSE 8080
 
