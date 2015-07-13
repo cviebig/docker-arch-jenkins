@@ -87,8 +87,11 @@ RUN curl -L $JENKINS_U/ant.hpi -o $JENKINS_P/ant.hpi && \
     touch $JENKINS_P/subversion.hpi.pinned && \
     touch $JENKINS_P/translation.hpi.pinned && \
     touch $JENKINS_P/token-macro.hpi.pinned && \
-    touch $JENKINS_P/windows-slaves.hpi.pinned && \
-    chown -R jenkins:jenkins $JENKINS_H
+    touch $JENKINS_P/windows-slaves.hpi.pinned
+
+ADD org.jenkinsci.plugins.dockerbuildstep.DockerBuilder.xml $JENKINS_H/
+
+RUN chown -R jenkins:jenkins $JENKINS_H
 
 RUN gpasswd -a jenkins docker
 

@@ -1,4 +1,5 @@
 #!/bin/sh
+export PORT=4243
 wrapdocker &
 chown -R jenkins:jenkins /var/lib/jenkins/.jenkins/jobs
 chmod -R 750 /var/lib/jenkins/.jenkins/jobs
