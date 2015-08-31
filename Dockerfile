@@ -2,9 +2,11 @@ FROM cviebig/arch-docker
 
 RUN pacman -S --noprogressbar --noconfirm --needed ca-certificates jenkins git subversion cvs
 
-ADD run.sh /var/lib/jenkins/
+ADD run.sh updatejobs.sh /var/lib/jenkins/
 RUN chown jenkins:jenkins /var/lib/jenkins/run.sh && \
-    chmod +x /var/lib/jenkins/run.sh
+    chmod +x /var/lib/jenkins/run.sh && \
+    chown jenkins:jenkins /var/lib/jenkins/updatejobs.sh && \
+    chmod +x /var/lib/jenkins/updatejobs.sh
 
 # Update all plugins and download
 # - git
