@@ -2,12 +2,6 @@ FROM cviebig/arch-docker
 
 RUN pacman -S --noprogressbar --noconfirm --needed ca-certificates jenkins git subversion cvs
 
-ADD run.sh updatejobs.sh /var/lib/jenkins/
-RUN chown jenkins:jenkins /var/lib/jenkins/run.sh && \
-    chmod +x /var/lib/jenkins/run.sh && \
-    chown jenkins:jenkins /var/lib/jenkins/updatejobs.sh && \
-    chmod +x /var/lib/jenkins/updatejobs.sh
-
 # Update all plugins and download
 # - git
 # - docker-plugin
@@ -37,7 +31,7 @@ RUN curl -L $JENKINS_U/ant.hpi -o $JENKINS_P/ant.hpi && \
     curl -L $JENKINS_U/docker-build-step.hpi -o $JENKINS_P/docker-build-step.hpi && \
     curl -L $JENKINS_U/docker-commons.hpi -o $JENKINS_P/docker-commons.hpi && \
     curl -L $JENKINS_U/durable-task.hpi -o $JENKINS_P/durable-task.hpi && \
-    curl -L $JENKINS_U/external-monitor-job.hpi -o $JENKINS_P/external-monitor.hpi && \
+    curl -L $JENKINS_U/external-monitor-job.hpi -o $JENKINS_P/external-monitor-job.hpi && \
     curl -L $JENKINS_U/git.hpi -o $JENKINS_P/git.hpi && \
     curl -L $JENKINS_U/git-client.hpi -o $JENKINS_P/git-client.hpi && \
     curl -L $JENKINS_U/javadoc.hpi -o $JENKINS_P/javadoc.hpi && \
@@ -67,7 +61,6 @@ RUN curl -L $JENKINS_U/ant.hpi -o $JENKINS_P/ant.hpi && \
     touch $JENKINS_P/docker-build-step.hpi.pinned && \
     touch $JENKINS_P/docker-commons.hpi.pinned && \
     touch $JENKINS_P/durable-task.hpi.pinned && \
-    touch $JENKINS_P/external-monitor.hpi.pinned && \
     touch $JENKINS_P/external-monitor-job.hpi.pinned && \
     touch $JENKINS_P/git.hpi.pinned && \
     touch $JENKINS_P/git-client.hpi.pinned && \
@@ -97,7 +90,12 @@ RUN chown -R jenkins:jenkins $JENKINS_H
 
 RUN gpasswd -a jenkins docker
 
-VOLUME $JENKINS_H/jobs
+ADD run.sh updatejobs.sh /var/lib/jenkins/
+RUN chown jenkins:jenkins /var/lib/jenkins/run.sh && \
+    chmod +x /var/lib/jenkins/run.sh && \
+    chown jenkins:jenkins /var/lib/jenkins/updatejobs.sh && \
+    chmod +x /var/lib/jenkins/updatejobs.sh
+
 EXPOSE 8080
 
 CMD ["/var/lib/jenkins/run.sh"]
