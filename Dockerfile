@@ -1,6 +1,6 @@
 FROM cviebig/arch-docker
 
-RUN pacman -S --noprogressbar --noconfirm --needed ca-certificates jenkins git subversion cvs
+RUN pacman -S --noprogressbar --noconfirm --needed jenkins git subversion cvs openssh
 
 # Update all plugins and download
 # - git
