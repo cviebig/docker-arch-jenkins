@@ -90,7 +90,10 @@ RUN chown -R jenkins:jenkins $JENKINS_H
 
 RUN gpasswd -a jenkins docker
 
-ADD run.sh updatejobs.sh /var/lib/jenkins/
+ADD run.sh /var/lib/jenkins/
+
+ADD updatejobs.sh /var/lib/jenkins/
+
 RUN chown jenkins:jenkins /var/lib/jenkins/run.sh && \
     chmod +x /var/lib/jenkins/run.sh && \
     chown jenkins:jenkins /var/lib/jenkins/updatejobs.sh && \
