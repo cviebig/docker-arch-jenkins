@@ -6,5 +6,5 @@ if [ -d "/root/config-ssh" ]; then
     cp -R /root/config-ssh /var/lib/jenkins/.ssh
     chown -R jenkins:jenkins /var/lib/jenkins/.ssh
 fi
-su -c "sh updatejobs.sh" - jenkins
-su -c "java -jar /usr/share/java/jenkins/jenkins.war \"$@\"" - jenkins
+su -s /bin/sh -c "sh updatejobs.sh" - jenkins
+su -s /bin/sh -c "java -jar /usr/share/java/jenkins/jenkins.war \"$@\"" - jenkins
