@@ -4,8 +4,9 @@ RUN pacman -S --noprogressbar --noconfirm --needed jenkins git subversion cvs op
 
 # Update all plugins and download
 # - git
+# - cmakebuilder
 # - docker-plugin
-# - docker-build-step
+# - mercurial
 # - publish-over-ssh
 # - multiple-scms
 # List retrieved from a fully updated instance
