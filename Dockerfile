@@ -27,6 +27,7 @@ RUN curl -L $JENKINS_U/ant.hpi -o $JENKINS_P/ant.hpi && \
     curl -L $JENKINS_U/antisamy-markup-formatter.hpi -o $JENKINS_P/antisamy-markup-formatter.hpi && \
     curl -L $JENKINS_U/authentication-tokens.hpi -o $JENKINS_P/authentication-tokens.hpi && \
     curl -L $JENKINS_U/credentials.hpi -o $JENKINS_P/credentials.hpi && \
+    curl -L $JENKINS_U/cmakebuilder.hpi -o $JENKINS_P/cmakebuilder.hpi && \
     curl -L $JENKINS_U/cvs.hpi -o $JENKINS_P/cvs.hpi && \
     curl -L $JENKINS_U/docker-plugin.hpi -o $JENKINS_P/docker-plugin.hpi && \
     curl -L $JENKINS_U/durable-task.hpi -o $JENKINS_P/durable-task.hpi && \
@@ -56,6 +57,7 @@ RUN curl -L $JENKINS_U/ant.hpi -o $JENKINS_P/ant.hpi && \
     touch $JENKINS_P/antisamy-markup-formatter.hpi.pinned && \
     touch $JENKINS_P/authentication-tokens.hpi.pinned && \
     touch $JENKINS_P/credentials.hpi.pinned && \
+    touch $JENKINS_P/cmakebuilder.hpi.pinned && \
     touch $JENKINS_P/cvs.hpi.pinned && \
     touch $JENKINS_P/docker-plugin.hpi.pinned && \
     touch $JENKINS_P/durable-task.hpi.pinned && \
