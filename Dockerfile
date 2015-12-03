@@ -42,6 +42,7 @@ RUN curl -L $JENKINS_U/ant.hpi -o $JENKINS_P/ant.hpi && \
     curl -L $JENKINS_U/matrix-auth.hpi -o $JENKINS_P/matrix-auth.hpi && \
     curl -L $JENKINS_U/matrix-project.hpi -o $JENKINS_P/matrix-project.hpi && \
     curl -L $JENKINS_U/maven-plugin.hpi -o $JENKINS_P/maven-plugin.hpi && \
+    curl -L $JENKINS_U/mercurial.hpi -o $JENKINS_P/mercurial.hpi && \
     curl -L $JENKINS_U/multiple-scms.hpi -o $JENKINS_P/multiple-scms.hpi && \
     curl -L $JENKINS_U/pam-auth.hpi -o $JENKINS_P/pam-auth.hpi && \
     curl -L $JENKINS_U/publish-over-ssh.hpi -o $JENKINS_P/publish-over-ssh.hpi && \
@@ -72,6 +73,7 @@ RUN curl -L $JENKINS_U/ant.hpi -o $JENKINS_P/ant.hpi && \
     touch $JENKINS_P/matrix-auth.hpi.pinned && \
     touch $JENKINS_P/matrix-project.hpi.pinned && \
     touch $JENKINS_P/maven-plugin.hpi.pinned && \
+    touch $JENKINS_P/mercurial.hpi.pinned && \
     touch $JENKINS_P/multiple-scms.hpi.pinned && \
     touch $JENKINS_P/pam-auth.hpi.pinned && \
     touch $JENKINS_P/publish-over-ssh.hpi.pinned && \
