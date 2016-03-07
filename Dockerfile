@@ -31,7 +31,6 @@ RUN curl -L $JENKINS_U/ant.hpi -o $JENKINS_P/ant.hpi && \
     curl -L $JENKINS_U/cvs.hpi -o $JENKINS_P/cvs.hpi && \
     curl -L $JENKINS_U/docker-build-step.hpi -o $JENKINS_P/docker-build-step.hpi && \
     curl -L $JENKINS_U/docker-commons.hpi -o $JENKINS_P/docker-commons.hpi && \
-    curl -L $JENKINS_U/docker-plugin.hpi -o $JENKINS_P/docker-plugin.hpi && \
     curl -L $JENKINS_U/durable-task.hpi -o $JENKINS_P/durable-task.hpi && \
     curl -L $JENKINS_U/external-monitor-job.hpi -o $JENKINS_P/external-monitor-job.hpi && \
     curl -L $JENKINS_U/git-client.hpi -o $JENKINS_P/git-client.hpi && \
@@ -65,7 +64,6 @@ RUN curl -L $JENKINS_U/ant.hpi -o $JENKINS_P/ant.hpi && \
     touch $JENKINS_P/cvs.hpi.pinned && \
     touch $JENKINS_P/docker-build-step.hpi.pinned && \
     touch $JENKINS_P/docker-commons.hpi.pinned && \
-    touch $JENKINS_P/docker-plugin.hpi.pinned && \
     touch $JENKINS_P/durable-task.hpi.pinned && \
     touch $JENKINS_P/external-monitor-job.hpi.pinned && \
     touch $JENKINS_P/git-client.hpi.pinned && \
