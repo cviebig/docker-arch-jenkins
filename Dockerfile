@@ -23,74 +23,74 @@ ENV JENKINS_P $JENKINS_H/plugins
 
 RUN mkdir -v -p $JENKINS_P
 
-RUN curl -L $JENKINS_U/ant.jpi -o $JENKINS_P/ant.jpi && \
-    curl -L $JENKINS_U/antisamy-markup-formatter.jpi -o $JENKINS_P/antisamy-markup-formatter.jpi && \
-    curl -L $JENKINS_U/authentication-tokens.jpi -o $JENKINS_P/authentication-tokens.jpi && \
+RUN curl -L $JENKINS_U/ant.hpi -o $JENKINS_P/ant.hpi && \
+    curl -L $JENKINS_U/antisamy-markup-formatter.hpi -o $JENKINS_P/antisamy-markup-formatter.hpi && \
+    curl -L $JENKINS_U/authentication-tokens.hpi -o $JENKINS_P/authentication-tokens.hpi && \
     curl -L $JENKINS_U/cmakebuilder.hpi -o $JENKINS_P/cmakebuilder.hpi && \
-    curl -L $JENKINS_U/credentials.jpi -o $JENKINS_P/credentials.jpi && \
-    curl -L $JENKINS_U/cvs.jpi -o $JENKINS_P/cvs.jpi && \
-    curl -L $JENKINS_U/docker-build-step.jpi -o $JENKINS_P/docker-build-step.jpi && \
-    curl -L $JENKINS_U/docker-commons.jpi -o $JENKINS_P/docker-commons.jpi && \
+    curl -L $JENKINS_U/credentials.hpi -o $JENKINS_P/credentials.hpi && \
+    curl -L $JENKINS_U/cvs.hpi -o $JENKINS_P/cvs.hpi && \
+    curl -L $JENKINS_U/docker-build-step.hpi -o $JENKINS_P/docker-build-step.hpi && \
+    curl -L $JENKINS_U/docker-commons.hpi -o $JENKINS_P/docker-commons.hpi && \
     curl -L $JENKINS_U/docker-plugin.hpi -o $JENKINS_P/docker-plugin.hpi && \
     curl -L $JENKINS_U/durable-task.hpi -o $JENKINS_P/durable-task.hpi && \
-    curl -L $JENKINS_U/external-monitor-job.jpi -o $JENKINS_P/external-monitor-job.jpi && \
+    curl -L $JENKINS_U/external-monitor-job.hpi -o $JENKINS_P/external-monitor-job.hpi && \
     curl -L $JENKINS_U/git-client.hpi -o $JENKINS_P/git-client.hpi && \
     curl -L $JENKINS_U/git.hpi -o $JENKINS_P/git.hpi && \
-    curl -L $JENKINS_U/icon-shim.jpi -o $JENKINS_P/icon-shim.jpi && \
-    curl -L $JENKINS_U/javadoc.jpi -o $JENKINS_P/javadoc.jpi && \
-    curl -L $JENKINS_U/junit.jpi -o $JENKINS_P/junit.jpi && \
-    curl -L $JENKINS_U/ldap.jpi -o $JENKINS_P/ldap.jpi && \
-    curl -L $JENKINS_U/mailer.jpi -o $JENKINS_P/mailer.jpi && \
+    curl -L $JENKINS_U/icon-shim.hpi -o $JENKINS_P/icon-shim.hpi && \
+    curl -L $JENKINS_U/javadoc.hpi -o $JENKINS_P/javadoc.hpi && \
+    curl -L $JENKINS_U/junit.hpi -o $JENKINS_P/junit.hpi && \
+    curl -L $JENKINS_U/ldap.hpi -o $JENKINS_P/ldap.hpi && \
+    curl -L $JENKINS_U/mailer.hpi -o $JENKINS_P/mailer.hpi && \
     curl -L $JENKINS_U/mapdb-api.hpi -o $JENKINS_P/mapdb-api.hpi && \
-    curl -L $JENKINS_U/matrix-auth.jpi -o $JENKINS_P/matrix-auth.jpi && \
-    curl -L $JENKINS_U/matrix-project.jpi -o $JENKINS_P/matrix-project.jpi && \
-    curl -L $JENKINS_U/maven-plugin.jpi -o $JENKINS_P/maven-plugin.jpi && \
+    curl -L $JENKINS_U/matrix-auth.hpi -o $JENKINS_P/matrix-auth.hpi && \
+    curl -L $JENKINS_U/matrix-project.hpi -o $JENKINS_P/matrix-project.hpi && \
+    curl -L $JENKINS_U/maven-plugin.hpi -o $JENKINS_P/maven-plugin.hpi && \
     curl -L $JENKINS_U/mercurial.hpi -o $JENKINS_P/mercurial.hpi && \
     curl -L $JENKINS_U/multiple-scms.hpi -o $JENKINS_P/multiple-scms.hpi && \
-    curl -L $JENKINS_U/pam-auth.jpi -o $JENKINS_P/pam-auth.jpi && \
+    curl -L $JENKINS_U/pam-auth.hpi -o $JENKINS_P/pam-auth.hpi && \
     curl -L $JENKINS_U/publish-over-ssh.hpi -o $JENKINS_P/publish-over-ssh.hpi && \
     curl -L $JENKINS_U/scm-api.hpi -o $JENKINS_P/scm-api.hpi && \
-    curl -L $JENKINS_U/script-security.jpi -o $JENKINS_P/script-security.jpi && \
-    curl -L $JENKINS_U/ssh-credentials.jpi -o $JENKINS_P/ssh-credentials.jpi && \
-    curl -L $JENKINS_U/ssh-slaves.jpi -o $JENKINS_P/ssh-slaves.jpi && \
-    curl -L $JENKINS_U/subversion.jpi -o $JENKINS_P/subversion.jpi && \
+    curl -L $JENKINS_U/script-security.hpi -o $JENKINS_P/script-security.hpi && \
+    curl -L $JENKINS_U/ssh-credentials.hpi -o $JENKINS_P/ssh-credentials.hpi && \
+    curl -L $JENKINS_U/ssh-slaves.hpi -o $JENKINS_P/ssh-slaves.hpi && \
+    curl -L $JENKINS_U/subversion.hpi -o $JENKINS_P/subversion.hpi && \
     curl -L $JENKINS_U/token-macro.hpi -o $JENKINS_P/token-macro.hpi && \
-    curl -L $JENKINS_U/translation.jpi -o $JENKINS_P/translation.jpi && \
-    curl -L $JENKINS_U/windows-slaves.jpi -o $JENKINS_P/windows-slaves.jpi && \
-    touch $JENKINS_P/ant.jpi.pinned && \
-    touch $JENKINS_P/antisamy-markup-formatter.jpi.pinned && \
-    touch $JENKINS_P/authentication-tokens.jpi.pinned && \
+    curl -L $JENKINS_U/translation.hpi -o $JENKINS_P/translation.hpi && \
+    curl -L $JENKINS_U/windows-slaves.hpi -o $JENKINS_P/windows-slaves.hpi && \
+    touch $JENKINS_P/ant.hpi.pinned && \
+    touch $JENKINS_P/antisamy-markup-formatter.hpi.pinned && \
+    touch $JENKINS_P/authentication-tokens.hpi.pinned && \
     touch $JENKINS_P/cmakebuilder.hpi.pinned && \
-    touch $JENKINS_P/credentials.jpi.pinned && \
-    touch $JENKINS_P/cvs.jpi.pinned && \
-    touch $JENKINS_P/docker-build-step.jpi.pinned && \
-    touch $JENKINS_P/docker-commons.jpi.pinned && \
+    touch $JENKINS_P/credentials.hpi.pinned && \
+    touch $JENKINS_P/cvs.hpi.pinned && \
+    touch $JENKINS_P/docker-build-step.hpi.pinned && \
+    touch $JENKINS_P/docker-commons.hpi.pinned && \
     touch $JENKINS_P/docker-plugin.hpi.pinned && \
     touch $JENKINS_P/durable-task.hpi.pinned && \
-    touch $JENKINS_P/external-monitor-job.jpi.pinned && \
+    touch $JENKINS_P/external-monitor-job.hpi.pinned && \
     touch $JENKINS_P/git-client.hpi.pinned && \
     touch $JENKINS_P/git.hpi.pinned && \
-    touch $JENKINS_P/icon-shim.jpi.pinned && \
-    touch $JENKINS_P/javadoc.jpi.pinned && \
-    touch $JENKINS_P/junit.jpi.pinned && \
-    touch $JENKINS_P/ldap.jpi.pinned && \
-    touch $JENKINS_P/mailer.jpi.pinned && \
+    touch $JENKINS_P/icon-shim.hpi.pinned && \
+    touch $JENKINS_P/javadoc.hpi.pinned && \
+    touch $JENKINS_P/junit.hpi.pinned && \
+    touch $JENKINS_P/ldap.hpi.pinned && \
+    touch $JENKINS_P/mailer.hpi.pinned && \
     touch $JENKINS_P/mapdb-api.hpi.pinned && \
-    touch $JENKINS_P/matrix-auth.jpi.pinned && \
-    touch $JENKINS_P/matrix-project.jpi.pinned && \
-    touch $JENKINS_P/maven-plugin.jpi.pinned && \
+    touch $JENKINS_P/matrix-auth.hpi.pinned && \
+    touch $JENKINS_P/matrix-project.hpi.pinned && \
+    touch $JENKINS_P/maven-plugin.hpi.pinned && \
     touch $JENKINS_P/mercurial.hpi.pinned && \
     touch $JENKINS_P/multiple-scms.hpi.pinned && \
-    touch $JENKINS_P/pam-auth.jpi.pinned && \
+    touch $JENKINS_P/pam-auth.hpi.pinned && \
     touch $JENKINS_P/publish-over-ssh.hpi.pinned && \
     touch $JENKINS_P/scm-api.hpi.pinned && \
-    touch $JENKINS_P/script-security.jpi.pinned && \
-    touch $JENKINS_P/ssh-credentials.jpi.pinned && \
-    touch $JENKINS_P/ssh-slaves.jpi.pinned && \
-    touch $JENKINS_P/subversion.jpi.pinned && \
+    touch $JENKINS_P/script-security.hpi.pinned && \
+    touch $JENKINS_P/ssh-credentials.hpi.pinned && \
+    touch $JENKINS_P/ssh-slaves.hpi.pinned && \
+    touch $JENKINS_P/subversion.hpi.pinned && \
     touch $JENKINS_P/token-macro.hpi.pinned && \
-    touch $JENKINS_P/translation.jpi.pinned && \
-    touch $JENKINS_P/windows-slaves.jpi.pinned
+    touch $JENKINS_P/translation.hpi.pinned && \
+    touch $JENKINS_P/windows-slaves.hpi.pinned
 
 ADD org.jenkinsci.plugins.dockerbuildstep.DockerBuilder.xml $JENKINS_H/
 
